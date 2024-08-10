@@ -8,9 +8,9 @@
     <div class="body-margin py-5">
         <div class="relative flex items-center justify-between">
             <a href="/" aria-label="{{$sitename}}" title="{{$sitename}}" class="inline-flex items-center">
-                <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">{{$sitename}}</span>
+                <span class="ml-2 text-xl font-bold tracking-wide text-gray-800">{{$sitename}}</span>
             </a>
-            <ul class="flex items-center hidden space-x-8 lg:flex">
+            <ul class="menu-items">
                 @foreach ($menus as $menu)
                     <li class="menu-item">{!! $menu !!}</li>
                 @endforeach
@@ -19,8 +19,8 @@
                 </li>
             </ul>
             <!-- Mobile menu -->
-            <div class="lg:hidden">
-                <button aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50">
+            <div class="mobile-menu-btn-container">
+                <button aria-label="Open Menu" title="Open Menu" class="mobile-menu-btn">
                     <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
                         <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
@@ -33,11 +33,11 @@
                         <div class="flex items-center justify-between mb-4">
                             <div>
                                 <a href="/" aria-label="{{$sitename}}" title="{{$sitename}}" class="inline-flex items-center">
-                                <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">{{$sitename}}</span>
+                                <span class="text-xl font-bold tracking-wide text-gray-800">{{$sitename}}</span>
                                 </a>
                             </div>
                             <div>
-                                <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                <button aria-label="Close Menu" title="Close Menu" class="mobile-menu-close-btn">
                                     <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
                                         <path
                                         fill="currentColor"
@@ -49,10 +49,9 @@
                         </div>
                         <nav>
                             <ul class="space-y-4">
-                                <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
-                                <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
-                                <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
-                                <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
+                                @foreach ($menus as $menu)
+                                <li class="mobile-menu-item">{!! $menu !!}</li>
+                                @endforeach
                                 <li>
                                     <div id="blinds_container_collapse_id" class="blinds-collapse"></div>
                                 </li>

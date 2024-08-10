@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         "primary-color": "var(--primary-color)",
+        "primary-color-hover": "var(--primary-color-hover)",
         "secondary-color": "var(--secondary-color)"
       },
     },
