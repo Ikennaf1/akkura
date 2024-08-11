@@ -13,7 +13,7 @@
 
     <body>
         {!! startBody() !!}
-        <div class="">
+        <div class="body-bg">
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
@@ -21,16 +21,11 @@
 
             <div class="flex flex-col gap-16">
                 {{-- Main section --}}
-                <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between mt-16">
+                <div class="">
+                    <div class="flex flex-wrap gap-16 justify-center">
                         {{-- Post content --}}
-                        <div class="post-content">
+                        <div class="single-post-content">
                             @include('front.parts.post-content')
-                        </div>
-
-                        {{-- Sidebar --}}
-                        <div class="sidebar">
-                            @include('front.parts.sidebar')
                         </div>
                     </div>
                 </div>

@@ -15,12 +15,20 @@
     --secondary-color: #102542;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .body-bg {
     background-color: #f5f5f5;
 }
 
 .body-margin {
     @apply px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
+}
+
+.link {
+    @apply text-primary-color hover:text-primary-color-hover transition duration-200;
 }
 
 .nav {
@@ -57,7 +65,8 @@
 }
 
 .posts-list-container {
-    @apply grid gap-16 lg:grid-cols-4 sm:max-w-sm sm:mx-auto lg:max-w-full;
+    grid-auto-flow: dense;
+    @apply grid gap-16 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full;
 }
 
 .post-card {
@@ -78,6 +87,10 @@
 
 .post-card-cta {
     @apply inline-flex items-center font-semibold transition-colors duration-200;
+}
+
+.contact-container {
+    @apply flex flex-col lg:flex-row justify-between items-center;
 }
 
 .newsletter-container {
@@ -102,4 +115,40 @@
 
 .newsletter-submit-btn {
     @apply bg-primary-color hover:bg-primary-color-hover block w-full py-3 mt-3 font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white transition duration-200;
+}
+
+.single-post-container {
+    @apply w-full mx-auto relative;
+}
+
+.single-post-featured-image {
+    @apply bg-cover bg-center text-center w-[96.4vw] md:w-[97.4vw] lg:w-[98.4vw] xl:w-[98.8vw] overflow-hidden;
+}
+
+main article {
+    @apply bg-white relative top-0 -mt-32 p-5 sm:p-10 shadow-lg;
+}
+
+main article h1 {
+    @apply text-gray-900 font-bold text-3xl mb-2;
+}
+
+main article h3 {
+    @apply text-2xl font-bold my-5;
+}
+
+main article p {
+    @apply text-base leading-8 my-5;
+}
+
+main article p a {
+    @apply text-base leading-8 my-5;
+}
+
+main article blockquote {
+    @apply border-l-4 text-base italic leading-8 my-5 p-5 text-gray-600;
+}
+
+main article .post-keywords {
+    @apply text-xs link transition duration-500 ease-in-out;
 }

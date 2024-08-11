@@ -44,7 +44,7 @@ $defaults = getThemeDefaults();
                             @foreach ($posts as $post)
                             @php
                                 $postIndex++;
-                                $imgHeight = $postIndex % 2 === 0 ? 'h-72' : 'h-48';
+                                $imgHeight = $postIndex % 2 === 0 ? 'h-72' : 'h-40';
                             @endphp
                             <div class="post-card">
                                 <img src="<?= $post->featured_image != null

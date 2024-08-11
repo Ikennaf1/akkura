@@ -1,18 +1,41 @@
-<main>
-    <div class="flex flex-col gap-8">
-        {{-- Post title --}}
-        <div class="">
-            <h1 class="text-4xl font-bold text-black">{{ $post->title }}</h1>
-        </div>
+<?php
+if (!empty($post->keywords)) {
+    $keywords = explode(',', $post->keywords);
+}
+?>
 
-        {{-- Post meta --}}
-        <div class="text-xs">
-            <p>By <a class="link" href="">{{ $post->author }}</a> | On {{ date('l jS F Y, h:ia', strtotime($post->updated_at)) }}</p>
-        </div>
+<main class="single-post-container">
+    <div class="single-post-featured-image"
+        style="min-height: 480px; background-image: url('{!! asset('/uploads/' . $post->featured_image) !!}')"
+        title="{{$post->title}}">
+    </div>
+    <div class="max-w-3xl mx-auto">
+        <div class="mt-3 bg-white rounded-b flex flex-col leading-normal">
+            <article class="">
+                <h1 href="#" class="">{{$post->title}}</h1>
+                <p class="text-xs mt-2">Written By:
+                    <a href="#"
+                        class="link text-xs">
+                        {{$post->author}}
+                    </a> In
+                    <a href="#"
+                        class="link text-xs">
+                        {{!empty($post->category) ? $post->category : 'No category'}}
+                    </a>
 
-        {{-- Post content --}}
-        <div class="flex flex-col gap-4">
-            {!! $post->content !!}
+                </p>
+
+                {{-- Post content --}}
+                <div class="flex flex-col gap-4">
+                    {!! $post->content !!}
+                </div>
+
+                @foreach ($keywords as $keyword)
+                    <a href="#" class="post-keywords">
+                        #{{$keyword}}
+                    </a>
+                @endforeach
+            </article>
         </div>
     </div>
 </main>
