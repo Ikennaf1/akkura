@@ -4,7 +4,7 @@
         <div class="newsletter-container">
             <h4 class="newsletter-title">Want more amazing posts?</h4>
             <p class="newsletter-text">
-                Sign up and get notified whenever new
+                Sign up to get notified whenever new
                 posts get published.
             </p>
             <div class="newsletter-form-container">
