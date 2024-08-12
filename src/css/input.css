@@ -28,7 +28,7 @@
 }
 
 .link {
-    @apply text-primary-color hover:text-primary-color-hover transition duration-200;
+    @apply text-primary-color hover:text-primary-color-hover transition duration-500;
 }
 
 .nav {
@@ -40,7 +40,7 @@
 }
 
 .menu-item {
-    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-primary-color;
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-500 hover:text-primary-color;
 }
 
 .mobile-menu-btn-container {
@@ -48,15 +48,15 @@
 }
 
 .mobile-menu-btn {
-    @apply p-2 mr-1 transition duration-200 rounded focus:outline-none;
+    @apply p-2 mr-1 transition duration-500 rounded focus:outline-none;
 }
 
 .mobile-menu-close-btn {
-    @apply p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none;
+    @apply p-2 -mt-2 -mr-2 transition duration-500 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none;
 }
 
 .mobile-menu-item {
-    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200;
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-500;
 }
 
 .tag-line {
@@ -70,15 +70,16 @@
 }
 
 .post-card {
-    @apply overflow-hidden transition-shadow duration-300 bg-white shadow-sm text-center self-start;
+    grid-auto-rows: auto;
+    @apply overflow-hidden transition-shadow duration-500 bg-white shadow-sm text-center self-start;
 }
 
 .post-card-title {
-    @apply inline-block mb-3 text-2xl leading-5 transition-colors duration-200;
+    @apply inline-block mb-3 text-2xl leading-5 hover:text-primary-color-hover transition-colors duration-500;
 }
 
 .post-card-category {
-    @apply transition-colors duration-200 text-gray-600;
+    @apply transition-colors duration-500 text-gray-600;
 }
 
 .post-card-desc {
@@ -86,7 +87,7 @@
 }
 
 .post-card-cta {
-    @apply inline-flex items-center font-semibold transition-colors duration-200;
+    @apply inline-flex items-center font-semibold transition-colors duration-500;
 }
 
 .contact-container {
@@ -114,7 +115,7 @@
 }
 
 .newsletter-submit-btn {
-    @apply bg-primary-color hover:bg-primary-color-hover block w-full py-3 mt-3 font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white transition duration-200;
+    @apply bg-primary-color hover:bg-primary-color-hover block w-full py-3 mt-3 font-bold tracking-wide rounded shadow sm:ml-3 md:w-52 text-white transition duration-500;
 }
 
 .single-post-container {
