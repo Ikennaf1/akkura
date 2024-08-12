@@ -33,15 +33,15 @@
 
 
 .blinds {
-    @apply hidden md:inline-block w-auto h-auto text-gray-600 cursor-pointer;
+    @apply hidden md:inline-block w-auto h-auto cursor-pointer;
 }
 
 .blinds-collapse {
-    @apply inline-block md:hidden w-auto h-auto text-gray-600 cursor-pointer;
+    @apply inline-block md:hidden w-auto h-auto cursor-pointer;
 }
 
 .nav {
-    @apply bg-white;
+    @apply bg-white text-gray-800;
 }
 
 .nav-fixed-bottom {
@@ -81,7 +81,7 @@
 }
 
 .menu-item {
-    @apply font-medium tracking-wide text-gray-700 transition-colors duration-500 hover:text-primary-color;
+    @apply font-medium tracking-wide transition-colors duration-500 hover:text-primary-color;
 }
 
 .mobile-menu-btn-container {

@@ -49,6 +49,14 @@ window.addEventListener('resize', updateIcon());
 document.querySelector('#blinds_id').onclick = () => {
     blindsToggle();
 };
-// let darkStyle = {};
-// setBlindsStyles(darkStyle);
+let darkStyle = {
+    ".body-bg": {
+        "background-color": "#0a0a0a"
+    },
+    ".nav,.tag-line": {
+        "background-color": "#0a0a0a",
+        "color": "#c0c0c0"
+    }
+};
+setBlindsStyles(darkStyle);
 blindsInit();

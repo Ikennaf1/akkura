@@ -874,8 +874,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
   width: auto;
   cursor: pointer;
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){
@@ -889,8 +887,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
   width: auto;
   cursor: pointer;
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){
@@ -902,6 +898,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .nav{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .nav-fixed-bottom{
@@ -1030,8 +1028,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .menu-item{
   font-weight: 500;
   letter-spacing: 0.025em;
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;

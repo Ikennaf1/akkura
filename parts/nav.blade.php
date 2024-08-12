@@ -13,7 +13,7 @@
     <div class="body-margin py-5">
         <div class="relative flex items-center justify-between">
             <a href="/" aria-label="{{$sitename}}" title="{{$sitename}}" class="inline-flex items-center">
-                <span class="ml-2 text-xl font-bold tracking-wide text-gray-800">{{$sitename}}</span>
+                <span class="ml-2 text-xl font-bold tracking-wide">{{$sitename}}</span>
             </a>
             <ul class="menu-items">
                 @foreach ($menus as $menu)
