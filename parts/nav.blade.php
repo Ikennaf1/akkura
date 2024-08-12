@@ -3,6 +3,11 @@
     $sitename = settings('r', 'general.name');
 @endphp
 
+<span id="top"></span>
+<div id="nav_fixed_bottom" class="nav-fixed-bottom">
+    <a href="#top" title="Move to top"><div class="nav-move-top">&#10224;</div></a>
+</div>
+
 {{-- main nav --}}
 <nav class="nav">
     <div class="body-margin py-5">
@@ -18,15 +23,19 @@
                     <div class="blinds" id="blinds_container_id"></div>
                 </li>
             </ul>
+            <button aria-label="Open Menu" title="Open Menu" onclick="handleNav()" class="mobile-menu-btn">
+                <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
+                    <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
+                    <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
+                </svg>
+            </button>
+
+            <button id="show_nav" class="hidden" type="button" onclick="handleNav()"></button>
+
             <!-- Mobile menu -->
-            <div class="mobile-menu-btn-container">
-                <button aria-label="Open Menu" title="Open Menu" class="mobile-menu-btn">
-                    <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
-                        <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
-                        <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
-                    </svg>
-                </button>
+            <div id="nav_collapsed" class="mobile-menu-btn-container">
+                
                 <!-- Mobile menu dropdown -->
                 <div class="absolute top-0 left-0 w-full">
                     <div class="p-5 bg-white border rounded shadow-sm">
@@ -37,7 +46,7 @@
                                 </a>
                             </div>
                             <div>
-                                <button aria-label="Close Menu" title="Close Menu" class="mobile-menu-close-btn">
+                                <button aria-label="Close Menu" title="Close Menu" class="mobile-menu-close-btn" onclick="handleNav()">
                                     <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
                                         <path
                                         fill="currentColor"

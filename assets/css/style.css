@@ -580,6 +580,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 8rem;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .w-6{
   width: 1.5rem;
 }
@@ -602,6 +606,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-3xl{
   max-width: 48rem;
+}
+
+.resize{
+  resize: both;
 }
 
 .flex-col{
@@ -861,9 +869,144 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: var(--primary-color-hover);
 }
 
+.blinds{
+  display: none;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .blinds{
+    display: inline-block;
+  }
+}
+
+.blinds-collapse{
+  display: inline-block;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .blinds-collapse{
+    display: none;
+  }
+}
+
 .nav{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.nav-fixed-bottom{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 40;
+  display: flex;
+  width: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px){
+  .nav-fixed-bottom{
+    bottom: 2rem;
+  }
+
+  .nav-fixed-bottom{
+    right: 2rem;
+  }
+
+  .nav-fixed-bottom{
+    width: 4rem;
+  }
+}
+
+.nav-fixed-bottom *{
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 0.5;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-fixed-bottom *:hover{
+  opacity: 1;
+}
+
+.nav-move-top{
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(4 12 20 / var(--tw-bg-opacity));
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.nav-collapse{
+  right: 0px;
+  z-index: 40;
+  height: 100vh;
+  width: 75%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  font-weight: 300;
+}
+
+@media (min-width: 768px){
+  .nav-collapse{
+    display: none;
+  }
+}
+
+.nav-collapsed {
+  opacity: 0;
+  /* transform: translateY(150%); */
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-show {
+  opacity: 1;
+  /* transform: translateY(0%); */
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-mobile-btn{
+  display: block;
+  cursor: pointer;
+}
+
+@media (min-width: 768px){
+  .menu-mobile-btn{
+    display: none;
+  }
 }
 
 .menu-items{
@@ -901,7 +1044,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .mobile-menu-btn-container{
-  z-index: 20;
+  top: 0px;
+  z-index: 50;
+  width: 100%;
 }
 
 @media (min-width: 1024px){
@@ -924,6 +1069,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mobile-menu-btn:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 1024px){
+  .mobile-menu-btn{
+    display: none;
+  }
 }
 
 .mobile-menu-close-btn{
@@ -998,7 +1149,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .posts-list-container{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

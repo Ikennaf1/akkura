@@ -54,3 +54,5 @@ $socials = themeGetSocials();
         </div>
     </footer>
 </div>
+
+<script src="https://cdn.jsdelivr.net/gh/Ikennaf1/blinds@latest/dist/blinds.min.js"></script>
