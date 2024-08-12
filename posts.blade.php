@@ -52,7 +52,7 @@ $defaults = getThemeDefaults();
                                  : asset('/uploads/images/post_default_image.png') ?>"
                                  class="object-cover w-full {{$imgHeight}}"
                                  alt="" />
-                                <div class="p-5">
+                                <div class="p-5 post-details">
                                     <a href="{{ exportLink("/posts/$post->link") }}" aria-label="Category" title="{{ $post->title }}" class="post-card-title">{{ $post->title }}</a>
                                     <p class="mb-3 text-xs tracking-wide">
                                         {{-- <a href="/" class="post-card-category" aria-label="Category" title="traveling">{{ !empty($post->category) ? $post->category : 'No category' }}</a> --}}

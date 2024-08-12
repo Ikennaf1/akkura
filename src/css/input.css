@@ -37,7 +37,7 @@
 }
 
 .blinds-collapse {
-    @apply inline-block md:hidden w-auto h-auto cursor-pointer;
+    @apply inline-block md:hidden w-auto h-auto cursor-pointer border-none;
 }
 
 .nav {
@@ -88,6 +88,14 @@
     @apply lg:hidden z-50 w-full top-0;
 }
 
+.mob-menu {
+    @apply p-5 bg-white border rounded shadow-sm;
+}
+
+.mob-menu-site-name {
+    @apply text-xl font-bold tracking-wide text-gray-800;
+}
+
 .mobile-menu-btn {
     @apply lg:hidden p-2 mr-1 transition duration-500 rounded focus:outline-none;
 }
@@ -97,7 +105,7 @@
 }
 
 .mobile-menu-item {
-    @apply font-medium tracking-wide text-gray-700 transition-colors duration-500;
+    @apply font-medium tracking-wide text-gray-700 border-none transition-colors duration-500;
 }
 
 .tag-line {
