@@ -45,6 +45,7 @@ $defaults = getThemeDefaults();
                             @php
                                 $postIndex++;
                                 $imgHeight = $postIndex % 2 === 0 ? 'h-72' : 'h-40';
+                                // $imgHeight = $postIndex % 2 === 0 ? 'row-span-2' : 'row-span-1';
                             @endphp
                             <div class="post-card">
                                 <img src="<?= $post->featured_image != null

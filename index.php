@@ -68,4 +68,8 @@ function themeGetContacts()
 
 registerSettingsForm('Akkura', 'akkura', front_path('pages/settings.php'));
 
+// customizeSelectors('akkura', [
+//     '.primary-color' => ['color'],
+// ]);
+
 // registerWidgetArea('right-sidebar');

@@ -503,6 +503,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
+.row-span-2{
+  grid-row: span 2 / span 2;
+}
+
+.row-span-1{
+  grid-row: span 1 / span 1;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1156,8 +1164,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.post-card {
-  grid-auto-rows: auto;
+.post-card{
   align-self: flex-start;
   overflow: hidden;
   --tw-bg-opacity: 1;
