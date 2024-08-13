@@ -123,7 +123,7 @@
 }
 
 .post-card-title {
-    @apply inline-block mb-3 text-2xl leading-5 hover:text-primary-color-hover transition-colors duration-500;
+    @apply inline-block mb-3 text-2xl leading-5 text-primary-color hover:text-primary-color-hover transition-colors duration-500;
 }
 
 .post-card-category {
@@ -199,5 +199,5 @@ main article blockquote {
 }
 
 main article .post-keywords {
-    @apply text-xs link transition duration-500 ease-in-out;
+    @apply text-xs transition duration-500 ease-in-out;
 }

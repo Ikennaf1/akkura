@@ -12,6 +12,8 @@ $defaults = getThemeDefaults();
         <link rel="stylesheet" href="{{ homeUrl('/assets/css/style.css') }}">
         <script type="text/javascript" src="{{ homeUrl('/assets/js/script.js') }}" defer></script>
         <title>{{ settings('r', "general.name", "Nidavel") }}</title>
+        {!!customizedStyles()!!}
+        {!! getHead() !!}
     </head>
 
     <body>

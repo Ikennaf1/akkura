@@ -1183,6 +1183,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-block;
   font-size: 1.5rem;
   line-height: 1.25rem;
+  color: var(--primary-color);
   transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
@@ -1495,14 +1496,9 @@ main article blockquote{
 main article .post-keywords{
   font-size: 0.75rem;
   line-height: 1rem;
-  color: var(--primary-color);
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-}
-
-main article .post-keywords:hover{
-  color: var(--primary-color-hover);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

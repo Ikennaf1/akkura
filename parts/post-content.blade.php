@@ -31,7 +31,7 @@ if (!empty($post->keywords)) {
                 </div>
 
                 @foreach ($keywords as $keyword)
-                    <a href="#" class="post-keywords">
+                    <a href="#" class="post-keywords link">
                         #{{$keyword}}
                     </a>
                 @endforeach

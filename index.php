@@ -68,8 +68,15 @@ function themeGetContacts()
 
 registerSettingsForm('Akkura', 'akkura', front_path('pages/settings.php'));
 
-// customizeSelectors('akkura', [
-//     '.primary-color' => ['color'],
-// ]);
+customizeSelectors('akkura', [
+    '.menu-item:hover' => ['color'],
+    '.link' => ['color'],
+    '.link:hover' => ['color'],
+    '.post-card-title' => ['color'],
+    '.newsletter-submit-btn' => ['background-color'],
+    '.newsletter-submit-btn:hover' => ['background-color'],
+    'main article p a' => ['color'],
+    'main article p a:hover' => ['color']
+]);
 
 // registerWidgetArea('right-sidebar');
